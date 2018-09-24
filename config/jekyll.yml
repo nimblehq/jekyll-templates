@@ -1,0 +1,48 @@
+---
+url: https://jekyll.template
+name: Jekyll Template
+permalink: pretty
+relative_permalinks: false
+timezone: Etc/UTC
+
+safe: true
+lsi: false
+markdown: kramdown
+
+sass:
+  style: compressed
+
+kramdown:
+  input: GFM
+
+collections:
+  pages:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+
+includes:
+  - assets
+
+exclude:
+  - .github/
+  - .idea/
+  - _js/
+  - bin/
+  - config/
+  - lib/
+  - node_modules/
+  - vendor/
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - Procfile.dev
+  - README.md

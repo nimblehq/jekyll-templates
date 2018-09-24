@@ -1,0 +1,32 @@
+<header class="app-header">
+  {% include logo.html %}
+
+  <nav class='app-navigation'>
+    <ul class="app-navigation__list">
+      {% for section in site.data.menu.header %}
+      {% if section.slug %}
+        {% assign section_url = '/pages/' | append: section.slug | append: '/' %}
+      {% else %}
+        {% assign section_url = '/' %}
+      {% endif %}
+      <li class="app-navigation__list-item{% if section_url == page.url %} app-navigation__list-item--active{% endif %}">
+        <a href="{{ section_url }}">{{ section.title }}</a>
+        {% if section.sub_pages %}
+        <ul class="app-navigation__sub-list">
+          {% for sub_page in section.sub_pages %}
+            {% assign sub_page_url = sub_page | prepend: section_url | append: '/' %}
+            {% for content_page in site.pages %}
+              {% if content_page.url == sub_page_url %}
+              <li class="app-navigation__sub-list-item{% if sub_page_url == page.url %} app-navigation__sub-list-item--active{% endif %}">
+                <a href="{{ sub_page_url }}">{{ content_page.title }}</a>
+              </li>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,9 @@
+.layout-default body {
+  display: grid;
+  grid-template-rows: 8.5rem 1fr 5rem;
+  min-height: 100vh;
+}
+
+.layout-default .app-header {
+  width: 100%;
+}

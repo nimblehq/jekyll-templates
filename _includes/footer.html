@@ -1,0 +1,16 @@
+<footer class="app-footer">
+  <nav class='secondary-navigation'>
+    <ul class="secondary-navigation__list">
+      {% for section in site.data.menu.footer %}
+      {% if section.slug %}
+        {% assign section_url = '/pages/' | append: section.slug | append: '/' %}
+      {% else %}
+        {% assign section_url = '/' %}
+      {% endif %}
+      <li class="secondary-navigation__list-item{% if section_url == page.url %} secondary-navigation__list-item--active{% endif %}">
+        <a href="{{ section_url }}">{{ section.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</footer>
