@@ -1,4 +1,8 @@
-Up-to-date starter kit for rapid static site development with Jekyll 🏎
+<p align="center">
+   Modern starter kit for rapid static site development with <strong>Jekyll</strong>
+</p>
+
+---
 
 ## Technologies
 
