@@ -13,9 +13,11 @@ This template offers rich development experience using the following technologie
 | [Jekyll](https://jekyllrb.com/)                   | Transform plain text into static websites and blogs.              |  
 | [Babel](http://babeljs.io)                        | Compiles ES6/7 to ES5. Enjoy the new version of JavaScript today. |
 | [Webpack](https://webpack.js.org)                 | Bundles npm packages and application JS together.                 |
-| [SASS](http://sass-lang.com/)                     | Compiled CSS styles with variables, functions, and more.          | 
+| [Vue JS](https://vuejs.org/)                      | Approachable, versatile and performant JavaScript framework       |
+| [ESLint](http://eslint.org/)                      | Lint JS. Reports syntax and style issues.                         |
 | [npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build.               | 
 | [Kramdown](https://kramdown.gettalong.org/)       | Ruby-based markdown parser allowing to use both Markdown and HTML.| 
+| [SASS](http://sass-lang.com/)                     | Compiled CSS styles with variables, functions, and more.          | 
 | [Docker](https://www.docker.com/)                 | Open platform to build, ship, and run applications everywhere.    | 
 
 ## Get Started
