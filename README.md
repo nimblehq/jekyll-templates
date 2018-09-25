@@ -11,7 +11,8 @@ This template offers rich development experience using the following technologie
 | [Webpack](https://webpack.js.org)                 | Bundles npm packages and application JS together.                 |
 | [SASS](http://sass-lang.com/)                     | Compiled CSS styles with variables, functions, and more.          | 
 | [npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build.               | 
-| [Kramdown](https://kramdown.gettalong.org/)       | Ruby-based markdown parser allowing to use both Markdown and HTML | 
+| [Kramdown](https://kramdown.gettalong.org/)       | Ruby-based markdown parser allowing to use both Markdown and HTML.| 
+| [Docker](https://www.docker.com/)                 | Open platform to build, ship, and run applications everywhere.    | 
 
 ## Get Started
 
