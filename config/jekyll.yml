@@ -26,6 +26,9 @@ defaults:
       type: "pages"
     values:
       layout: default
+      seo:
+        description: "Yay! You're on Jekyll!"
+        image: "/public/images/social/og-icon.jpg"
 
 includes:
   - assets
