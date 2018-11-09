@@ -7,7 +7,7 @@ ARG NODE_ENV=development
 ENV RACK_ENV=$RUBY_ENV \
     NODE_ENV=$NODE_ENV
 
-ENV APP_HOME=/compass \
+ENV APP_HOME=/jekyll-template \
     PORT=4000
 
 ENV BUNDLE_GEMFILE=$APP_HOME/Gemfile \
