@@ -24,7 +24,7 @@ This template offers rich development experience using the following technologie
 
 ### Using Docker
 
-This is the fastest way to get started working on Compass:
+This is the fastest way to get started working on Jekyll:
 
 * Rename the env file `.env.sample` to `.env` and add the required environment variables
 
@@ -142,7 +142,7 @@ Corresponding to the following file structure:
 
 This script deploys both the public and internal sites.
 
-> .env.docker is used to load the environment variables from the local environment `docker run --rm --entrypoint '/bin/bash' --env-file .env.docker -it compass`
+> .env.docker is used to load the environment variables from the local environment `docker run --rm --entrypoint '/bin/bash' --env-file .env.docker -it jekyll-template`
 
 ## Troubleshooting
 
