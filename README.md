@@ -134,6 +134,27 @@ Corresponding to the following file structure:
 * In the case of using media other than images, prefer creating a new sub-directory e.g. `assets/videos/pages/<section-name>` 
 * To embed these media in the content, use the absolute path to each file: `/assets/<media type>/pages/<section-name>/<filename.extension>`
 
+## Testing
+
+As a static site grows to tens of hundreds of pages, broken links or HTML could easily make its way to a number of pages. 
+To prevent this issue, we use []HTMLProofer](https://github.com/gjtorikian/html-proofer).
+
+### Using Docker
+
+Include this in your CI / CD pipeline:
+
+```shell
+docker run --rm --entrypoint '/bin/bash' -it $DOCKER_IMAGE:$BRANCH_TAG -c 'bundle exec rake test:lint'
+```
+
+### Without Docker
+
+Run this locally or your CI / CD pipeline:
+
+```shell
+bundle exec rake test:lint
+```
+
 ## Deployment
 
 * Setup the Docker image locally: `./bin/setup`
