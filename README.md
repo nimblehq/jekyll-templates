@@ -136,7 +136,8 @@ Corresponding to the following file structure:
 
 ## Testing
 
-As a static site grows to tens of hundreds of pages, broken links or HTML could easily make its way to a number of pages. To prevent this issue, we use []HTMLProofer](https://github.com/gjtorikian/html-proofer).
+As a static site grows to tens of hundreds of pages, broken links or HTML could easily make its way to a number of pages. 
+To prevent this issue, we use []HTMLProofer](https://github.com/gjtorikian/html-proofer).
 
 ### Using Docker
 
