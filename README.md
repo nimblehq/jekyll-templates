@@ -172,10 +172,9 @@ to have the previous version 8 installed.
   
 How to install multiple versions of Java on Mac:
 
-* Install [jenv](http://www.jenv.be/)
-* Install Java 8 using `homebrew` and `cask`: `brew cask install caskroom/versions/java8`
-* In the app directory, set the local version to java 8: `jenv local 8.0`
-
+1. Install [jenv](http://www.jenv.be/)
+2. Install Java 8 using `homebrew` and `cask`: `brew cask install caskroom/versions/java8`
+3. In the app directory, set the local version to java 8: `jenv local 8.0`
 
 * Deploy commands outputs "There was nothing to push":
 
