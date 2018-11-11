@@ -46,7 +46,9 @@ exclude:
   - Dockerfile
   - Gemfile
   - Gemfile.lock
+  - LICENSE
   - package.json
   - package-lock.json
   - Procfile.dev
   - README.md
+  - Rakefile
