@@ -1,6 +1,7 @@
 ---
 id: about
 title: About
+permalink: /about
 ---
 
 ## Why Jekyll?

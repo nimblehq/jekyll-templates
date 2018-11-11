@@ -1,6 +1,7 @@
 ---
-id: contact-us
+id: contact
 title: Contact
+permalink: /contact
 ---
 
 ## Contact Jekyll
