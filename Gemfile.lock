@@ -80,6 +80,7 @@ GEM
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.3)
+    rake (12.3.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -112,10 +113,11 @@ DEPENDENCIES
   foreman
   html-proofer
   jekyll (= 3.8.3)
+  rake
   s3_website
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 2.5.3p105
 
 BUNDLED WITH
-   1.16.4
+   1.16.6

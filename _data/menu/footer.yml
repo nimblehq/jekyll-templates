@@ -1,5 +1,6 @@
 - title: Home
+  permalink: /
 - title: About
-  slug: about
+  permalink: /about
 - title: Contact Us
-  slug: contact-us
+  permalink: /contact
