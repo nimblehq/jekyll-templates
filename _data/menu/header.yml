@@ -1,5 +1,7 @@
 - title: Home
+  permalink: /
 - title: About
-  slug: about
+  permalink: /about
   sub_pages:
-  - team
+  - title: Team
+    permalink: /team

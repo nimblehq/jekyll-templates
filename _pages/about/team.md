@@ -1,6 +1,7 @@
 ---
 id: about-team
 title: Team
+permalink: /about/team
 parent: about
 ---
 
