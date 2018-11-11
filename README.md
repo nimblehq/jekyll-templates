@@ -137,7 +137,7 @@ Corresponding to the following file structure:
 ## Testing
 
 As a static site grows to tens of hundreds of pages, broken links or HTML could easily make its way to a number of pages. 
-To prevent this issue, we use []HTMLProofer](https://github.com/gjtorikian/html-proofer).
+To prevent this issue, we use [HTMLProofer](https://github.com/gjtorikian/html-proofer).
 
 ### Using Docker
 
@@ -171,9 +171,11 @@ This script deploys both the public and internal sites.
 to have the previous version 8 installed.
   
 How to install multiple versions of Java on Mac:
-    * Install[jenv](http://www.jenv.be/)
-    * Install Java 8 using `homebrew` and `cask`: `brew cask install caskroom/versions/java8`
-    * In the app directory, set the local version to java 8: `jenv local 8.0`
+
+* Install [jenv](http://www.jenv.be/)
+* Install Java 8 using `homebrew` and `cask`: `brew cask install caskroom/versions/java8`
+* In the app directory, set the local version to java 8: `jenv local 8.0`
+
 
 * Deploy commands outputs "There was nothing to push":
 
