@@ -5,7 +5,9 @@ permalink: pretty
 relative_permalinks: false
 timezone: Etc/UTC
 
-safe: true
+# Required to use local plugins
+safe: false
+
 lsi: false
 markdown: kramdown
 
