@@ -15,8 +15,10 @@ sass:
   style: compressed
 
 kramdown:
+  # All config options: https://jekyllrb.com/docs/configuration/markdown/
   input: GFM
   parse_block_html: true
+  auto_ids: false
 
 collections:
   pages:
