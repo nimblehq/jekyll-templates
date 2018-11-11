@@ -47,7 +47,7 @@ properly inside the Docker container.
 
 ### Without Docker a.k.a the legacy way 😢
 
-* Make sure that you have Ruby `2.5.1` and Node.JS > `8.6.0`
+* Make sure that you have Ruby `2.5.3` and Node.JS > `8.6.0`
 
 * Install dependencies
 
