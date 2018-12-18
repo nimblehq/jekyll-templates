@@ -56,10 +56,13 @@ const shared = {
   },
 
   plugins: [
-    new SVGSpritemapPlugin({
-      src: resolve('assets/images/shared/icons/*.svg'),
-      filename: 'icon-sprite.svg',
-      prefix: ''
+    new SVGSpritemapPlugin(resolve('assets/images/shared/icons/*.svg'), {
+      output: {
+        filename: 'icon-sprite.svg'
+      },
+      sprite: {
+        prefix: false
+      }
     }),
 
     new WebpackShellPlugin({
