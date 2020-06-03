@@ -3,12 +3,10 @@
     "browser": 1
   },
   "extends": [
-    "@nimbl3/eslint-config-nimbl3",
-    "plugin:vue/recommended"
+    "@nimblehq/eslint-config-nimble"
   ],
   "rules": {
     "no-new": "off"
   },
-  "globals": {
-  }
+  "globals": {}
 }

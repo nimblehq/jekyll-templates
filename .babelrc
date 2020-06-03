@@ -1,32 +1,11 @@
 {
   "presets": [
-    "es2015"
-  ],
-  "env": {
-    "development": {
-      "presets": [
-        "env"
-      ]
-    },
-    "production": {
-      "presets": [
-        [
-          "env",
-          {
-            "es2015": {
-              "modules": false
-            },
-            "targets": {
-              "ie": 9,
-              "uglify": true
-            }
-          }
-        ]
-      ],
-      "plugins": []
-    },
-    "test": {
-      "presets": ["env"]
-    }
-  }
+    [
+      "@babel/preset-env",
+      {
+        "corejs": "3.6",
+        "useBuiltIns": "entry"
+      }
+    ]
+  ]
 }
