@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.5.3'
+ruby '2.7.1'
 
 # Jekyll and its dependencies
 gem 'jekyll', '3.8.5'

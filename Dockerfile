@@ -1,4 +1,4 @@
-FROM ruby:2.5.3-slim
+FROM ruby:2.7.1-slim
 
 ARG RUBY_ENV=development
 ARG NODE_ENV=development
@@ -14,7 +14,7 @@ ENV BUNDLE_GEMFILE=$APP_HOME/Gemfile \
     BUNDLE_JOBS=4 \
     BUNDLE_PATH="/bundle"
 
-ENV RUBY_VERSION="2.5.0" \
+ENV RUBY_VERSION="2.7.1" \
     NODE_VERSION="8" \
     S3_WEBSITE_VERSION="3.4.0"
 
