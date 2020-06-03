@@ -8,14 +8,13 @@
 
 This template offers rich development experience using the following technologies:
 
-| **Tech**                                          | **Description**                                                   |
+| **Tech*-                                          | **Description*-                                                   |
 |---------------------------------------------------|-------------------------------------------------------------------|
 | [Jekyll](https://jekyllrb.com/)                   | Transform plain text into static websites and blogs.              |  
 | [Babel](http://babeljs.io)                        | Compiles ES6/7 to ES5. Enjoy the new version of JavaScript today. |
 | [Webpack](https://webpack.js.org)                 | Bundles npm packages and application JS together.                 |
-| [Vue JS](https://vuejs.org/)                      | Approachable, versatile and performant JavaScript framework       |
 | [ESLint](http://eslint.org/)                      | Lint JS. Reports syntax and style issues.                         |
-| [npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build.               | 
+| [NPM Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build.               | 
 | [Kramdown](https://kramdown.gettalong.org/)       | Ruby-based markdown parser allowing to use both Markdown and HTML.| 
 | [SASS](http://sass-lang.com/)                     | Compiled CSS styles with variables, functions, and more.          | 
 | [Docker](https://www.docker.com/)                 | Open platform to build, ship, and run applications everywhere.    | 
@@ -26,15 +25,15 @@ This template offers rich development experience using the following technologie
 
 This is the fastest way to get started working on Jekyll:
 
-* Rename the env file `.env.sample` to `.env` and add the required environment variables
+- Rename the env file `.env.sample` to `.env` and add the required environment variables
 
-* Build the image locally and create a container for the application: 
+- Build the image locally and create a container for the application: 
 
 ```shell
 ./bin/setup
 ```
 
-* Start the container:
+- Start the container:
 
 ```shell
 ./bin/start
@@ -47,23 +46,23 @@ properly inside the Docker container.
 
 ### Without Docker a.k.a the legacy way 😢
 
-* Make sure that you have Ruby `2.5.3` and Node.JS > `8.6.0`
+- Make sure that you have Ruby `2.7.1` and Node.JS > `12.x.x`
 
-* Install dependencies
+- Install dependencies
 
 ```shell
 bundle install
 npm install
 ```
 
-* Use Jekyll to serve the website locally (by default, at `http://localhost:5000`):
+- Use Jekyll to serve the website locally (by default, at `http://localhost:5000`):
 
 ```shell
 $ bundle exec jekyll serve --config ./config/jekyll.yml [--incremental]
 $ open http://localhost:5000/
 ```
 
-* Compile assets using Webpack: 
+- Compile assets using Webpack: 
 
 ```shell
 npm run start
@@ -78,10 +77,10 @@ All content is written using [kramdown](https://kramdown.gettalong.org/) which i
 
 ### Text Content
 
-* Text content is stored in `_pages` into sub-directories. No content must be placed in the root of `_pages`.
-* File names must be kebab-cased (hyphenated delimited) corresponding to an entry in the navigation (see below) 
-* Each file must be written in markdown and have an `.md` extension as Jekyll converts markdown files into HTML
-* Each file must contain a front-matter block at the beginning of the file with the config params `id` and `title`:
+- Text content is stored in `_pages` into sub-directories. No content must be placed in the root of `_pages`.
+- File names must be kebab-cased (hyphenated delimited) corresponding to an entry in the navigation (see below) 
+- Each file must be written in markdown and have an `.md` extension as Jekyll converts markdown files into HTML
+- Each file must contain a front-matter block at the beginning of the file with the config params `id` and `title`:
 
 ```yaml
 id: about
@@ -100,9 +99,9 @@ parent: about
 
 The navigation is generated from the data stored in `_data/menu/header.yml` and `_data/menu/footer.yml`:
 
-* Each pages contains a `title`, `slug` and `sub-pages`
-* The `slug` and `sub-pages` need to be kebab-cased as these strings are used to generate URLs
-* The `slug` corresponds to the page or sub-directory in `pages`
+- Each pages contains a `title`, `slug` and `sub-pages`
+- The `slug` and `sub-pages` need to be kebab-cased as these strings are used to generate URLs
+- The `slug` corresponds to the page or sub-directory in `pages`
 
 Example:
 
@@ -130,9 +129,9 @@ Corresponding to the following file structure:
 
 ### Assets
 
-* Media used to enrich text content must be stored in `assets/<media type>/pages/<section-name>`. 
-* In the case of using media other than images, prefer creating a new sub-directory e.g. `assets/videos/pages/<section-name>` 
-* To embed these media in the content, use the absolute path to each file: `/assets/<media type>/pages/<section-name>/<filename.extension>`
+- Media used to enrich text content must be stored in `assets/<media type>/pages/<section-name>`. 
+- In the case of using media other than images, prefer creating a new sub-directory e.g. `assets/videos/pages/<section-name>` 
+- To embed these media in the content, use the absolute path to each file: `/assets/<media type>/pages/<section-name>/<filename.extension>`
 
 ## Testing
 
@@ -157,45 +156,29 @@ bundle exec rake test:lint
 
 ## Deployment
 
-* Setup the Docker image locally: `./bin/setup`
+### Using GitHub Pages
 
-* Publish the latest changes to S3: `./bin/deploy`
+- Make sure that `index.md` is in the root of the directory
+- Head over to the setting page of the repository: `https://github.com/<REPLACE_WITH_HANDLE>/<REPLACE_WITH_REPOSITORY_NAME>/settings` e.g. `https://github.com/nimblehq/jekyll-templates/settings`
+- Select the option `master branch` in the Github Pages section
 
-This script deploys both the public and internal sites.
-
-> .env.docker is used to load the environment variables from the local environment `docker run --rm --entrypoint '/bin/bash' --env-file .env.docker -it jekyll-template`
-
-## Troubleshooting
-
-* When not using the Docker setup, `s3_website` currently does not work on the latest Java versions 9/10. It's necessary 
-to have the previous version 8 installed.
-  
-How to install multiple versions of Java on Mac:
-
-1. Install [jenv](http://www.jenv.be/)
-2. Install Java 8 using `homebrew` and `cask`: `brew cask install caskroom/versions/java8`
-3. In the app directory, set the local version to java 8: `jenv local 8.0`
-
-* Deploy commands outputs "There was nothing to push":
-
-In most cases, the gem `s3_website` outputs this message when changes to the assets have been performed but not on the 
-markdown files. In this case, `s3_website push --force` will push all content.
+You are all set 🏄‍♂️For complete details, header over to the [official documentation](https://help.github.com/en/github/working-with-github-pages)
 
 ## License
 
-This project is Copyright (c) 2014-2018 Nimbl3 Ltd. It is free software,
+This project is Copyright (c) 2014-2020 Nimble. It is free software,
 and may be redistributed under the terms specified in the [LICENSE] file.
 
 [LICENSE]: /LICENSE
 
 ## About
 
-![Nimbl3](https://dtvm7z6brak4y.cloudfront.net/logo/logo-repo-readme.jpg)
+![Nimble](https://assets.nimblehq.co/logo/dark/logo-dark-text-160.png)
 
-This project is maintained and funded by Nimbl3 Ltd.
+This project is maintained and funded by Nimble.
 
 We love open source and do our part in sharing our work with the community!
 See [our other projects][community] or [hire our team][hire] to help build your product.
 
-[community]: https://nimbl3.github.io/
-[hire]: https://nimbl3.com/
+[community]: https://github.com/nimblehq
+[hire]: https://nimblehq.co/
