@@ -15,8 +15,7 @@ ENV BUNDLE_GEMFILE=$APP_HOME/Gemfile \
     BUNDLE_PATH="/bundle"
 
 ENV RUBY_VERSION="2.7.1" \
-    NODE_VERSION="8" \
-    S3_WEBSITE_VERSION="3.4.0"
+    NODE_VERSION="8"
 
 ENV LANG="en_US.UTF-8" \
     LC_ALL="en_US.UTF-8" \
@@ -29,10 +28,10 @@ RUN apt-get update -qq && \
 # This will have more up-to-date versions of Node.js than the official Debian repositories
 RUN curl -sL https://deb.nodesource.com/setup_"$NODE_VERSION".x | bash -
 
-# Install general required core packages, Node JS related packages and Chrome (testing)
+# Install general required core packages and Node JS related packages
 RUN apt-get update -qq && \
     apt-get install -y --no-install-recommends build-essential libpq-dev nodejs yarn && \
-    apt-get install -y --no-install-recommends rsync locales chrpath pkg-config libfreetype6 libfontconfig1 openjdk-8-jre && \
+    apt-get install -y --no-install-recommends rsync locales chrpath pkg-config libfreetype6 libfontconfig1 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -47,9 +46,7 @@ WORKDIR $APP_HOME
 # Install Ruby dependencies
 COPY Gemfile* ./
 
-RUN bundle install --jobs $BUNDLE_JOBS --path $BUNDLE_PATH && \
-    # pre-install the jar file required to deploy to S3
-    curl -L https://github.com/laurilehmijoki/s3_website/releases/download/v${S3_WEBSITE_VERSION}/s3_website.jar > ${BUNDLE_PATH}/ruby/${RUBY_VERSION}/gems/s3_website-${S3_WEBSITE_VERSION}/s3_website-${S3_WEBSITE_VERSION}.jar
+RUN bundle install --jobs $BUNDLE_JOBS --path $BUNDLE_PATH
 
 # Install JS dependencies
 COPY package.json package-lock.json ./

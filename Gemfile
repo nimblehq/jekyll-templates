@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.7.1'
 
 # Jekyll and its dependencies
-gem 'jekyll', '3.8.5'
+gem 'jekyll'
 
 group :development, :test do
   gem 'rake'        # A make-like build utility for Ruby. Required to run tests.
