@@ -11,7 +11,6 @@ const shared = {
 
   entry: {
     application: [
-      'babel-polyfill',
       resolve('_js/application.js')
     ]
   },
@@ -36,23 +35,17 @@ const shared = {
   module: {
     rules: [
       {
-        test: /\.vue$/,
-        loaders: ['vue-loader']
-      },
-      {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader']
+        use: {
+          loader: "babel-loader"
+        }
       }
     ]
   },
 
   resolve: {
     extensions: ['*', '.js', '.json'],
-
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    }
   },
 
   plugins: [

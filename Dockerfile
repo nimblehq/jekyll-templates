@@ -15,7 +15,7 @@ ENV BUNDLE_GEMFILE=$APP_HOME/Gemfile \
     BUNDLE_PATH="/bundle"
 
 ENV RUBY_VERSION="2.7.1" \
-    NODE_VERSION="8"
+    NODE_VERSION="12"
 
 ENV LANG="en_US.UTF-8" \
     LC_ALL="en_US.UTF-8" \
@@ -46,7 +46,7 @@ WORKDIR $APP_HOME
 # Install Ruby dependencies
 COPY Gemfile* ./
 
-RUN bundle install --jobs $BUNDLE_JOBS --path $BUNDLE_PATH
+RUN bundle config set path '$BUNDLE_PATH' && bundle install --jobs $BUNDLE_JOBS
 
 # Install JS dependencies
 COPY package.json package-lock.json ./
