@@ -162,7 +162,7 @@ bundle exec rake test:lint
 - Head over to the setting page of the repository: `https://github.com/<REPLACE_WITH_HANDLE>/<REPLACE_WITH_REPOSITORY_NAME>/settings` e.g. `https://github.com/nimblehq/jekyll-templates/settings`
 - Select the option `master branch` in the Github Pages section
 
-You are all set 🏄‍♂️For complete details, header over to the [official documentation](https://help.github.com/en/github/working-with-github-pages)
+You are all set 🏄‍♂ ️For complete details, header over to the [official documentation](https://help.github.com/en/github/working-with-github-pages)
 
 ## License
 
