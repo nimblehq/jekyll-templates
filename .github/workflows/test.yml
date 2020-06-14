@@ -1,5 +1,4 @@
 name: PR Test
-description: Execute all tests
 
 on: push
 
