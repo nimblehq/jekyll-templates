@@ -5,12 +5,15 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: ruby:2.7.1-alpine
 
     steps:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
+
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.7.1'
 
       - uses: actions/cache@v2
         with:
@@ -21,7 +24,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          gem install bundler
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
 
