@@ -15,14 +15,16 @@ jobs:
         with:
           ruby-version: '2.7.1'
 
-      - uses: actions/cache@v2
+      - name: Cache Ruby Gems
+        uses: actions/cache@v2
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
 
-      - uses: actions/cache@v2
+      - name: Cache node modules
+        uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
