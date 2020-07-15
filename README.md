@@ -15,6 +15,7 @@ This template offers rich development experience using the following technologie
 | [ESLint](http://eslint.org/)                      | Lint JS. Reports syntax and style issues.                         |
 | [Kramdown](https://kramdown.gettalong.org/)       | Ruby-based markdown parser allowing to use both Markdown and HTML.| 
 | [SASS](http://sass-lang.com/)                     | Compiled CSS styles with variables, functions, and more.          | 
+| [TailwindCSS](https://tailwindcss.com/)           | A utility-first CSS framework for rapidly building custom designs.| 
 | [Docker](https://www.docker.com/)                 | Open platform to build, ship, and run applications everywhere.    | 
 
 ## Get Started
