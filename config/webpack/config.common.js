@@ -6,7 +6,7 @@ function resolve (dir) {
   return path.join(__dirname, '../../', dir)
 }
 
-const shared = {
+const configCommon = {
   context: resolve('/'),
 
   entry: {
@@ -69,4 +69,4 @@ const shared = {
   ],
 };
 
-module.exports = shared;
+module.exports = configCommon;
