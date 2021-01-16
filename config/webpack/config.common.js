@@ -6,7 +6,7 @@ function resolve (dir) {
   return path.join(__dirname, '../../', dir)
 }
 
-const shared = {
+const configCommon = {
   context: resolve('/'),
 
   entry: {
@@ -23,7 +23,7 @@ const shared = {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        commons: {
+        vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
           chunks: 'all'
@@ -69,4 +69,4 @@ const shared = {
   ],
 };
 
-module.exports = shared;
+module.exports = configCommon;

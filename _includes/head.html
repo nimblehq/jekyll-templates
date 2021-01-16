@@ -1,6 +1,7 @@
 {% capture parent_page_title %}{% if page.parent %}{{ page.parent | capitalize }} | {% endif %}{% endcapture %}
 {% capture meta_title %}{{ site.name | append: ' | ' | append: parent_page_title | append: page.title }}{% endcapture %}
 {% capture meta_description %}{% if page.seo.description %}{{ page.seo.description }}{% else %}{{ site.seo.description }}{% endif %}{% endcapture %}
+{% capture meta_image %}{% if page.seo.image %}{{ page.seo.image }}{% else %}{{ site.seo.image }}{% endif %}{% endcapture %}
 <title>{{ meta_title }}</title>
 <meta name="description" content="{{ meta_description }}" />
 
@@ -12,13 +13,13 @@
 <meta property="og:description" content="{{ meta_description }}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ site.url }}" />
-<meta property="og:image" content="{{ site.seo.image }}" />
+<meta property="og:image" content="{{ meta_image }}" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="{{ site.url }}" />
 <meta name="twitter:title" content="{{ meta_title }}" />
 <meta name="twitter:description" content="{{ meta_description }}" />
-<meta name="twitter:image" content="/public/images/social/og-twitter-icon.png" />
+<meta name="twitter:image" content="{{ meta_image }}" />
 
 <meta name="apple-mobile-web-app-title" content="Jekyll Template"/>
 <meta name="mobile-web-app-capable" content="yes"/>

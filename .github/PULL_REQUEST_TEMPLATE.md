@@ -1,4 +1,4 @@
-https://github.com/nimbl3/jekyll-template/issues/??
+https://github.com/nimblehq/jekyll-templates/issues/??
 
 ## What happened
 

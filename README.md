@@ -10,13 +10,12 @@ This template offers rich development experience using the following technologie
 
 | **Tech*-                                          | **Description*-                                                   |
 |---------------------------------------------------|-------------------------------------------------------------------|
-| [Jekyll](https://jekyllrb.com/)                   | Transform plain text into static websites and blogs.              |  
-| [Babel](http://babeljs.io)                        | Compiles ES6/7 to ES5. Enjoy the new version of JavaScript today. |
-| [Webpack](https://webpack.js.org)                 | Bundles npm packages and application JS together.                 |
+| [Jekyll](https://jekyllrb.com/)                   | Transform plain text into static websites and blogs.              |
+| [Kramdown](https://kramdown.gettalong.org/)       | Ruby-based markdown parser allowing to use both Markdown and HTML.|
+| [TailwindCSS](https://tailwindcss.com/)           | A utility-first CSS framework for rapidly building custom designs.| 
+| [Stimulus JS](https://stimulus.hotwire.dev/)      | A A modest JavaScript framework for the HTML you already have.    |
 | [ESLint](http://eslint.org/)                      | Lint JS. Reports syntax and style issues.                         |
-| [NPM Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build.               | 
-| [Kramdown](https://kramdown.gettalong.org/)       | Ruby-based markdown parser allowing to use both Markdown and HTML.| 
-| [SASS](http://sass-lang.com/)                     | Compiled CSS styles with variables, functions, and more.          | 
+| [Webpack](https://webpack.js.org)                 | Bundles npm packages and application JS together.                 |
 | [Docker](https://www.docker.com/)                 | Open platform to build, ship, and run applications everywhere.    | 
 
 ## Get Started
@@ -162,11 +161,11 @@ bundle exec rake test:lint
 - Head over to the setting page of the repository: `https://github.com/<REPLACE_WITH_HANDLE>/<REPLACE_WITH_REPOSITORY_NAME>/settings` e.g. `https://github.com/nimblehq/jekyll-templates/settings`
 - Select the option `master branch` in the Github Pages section
 
-You are all set 🏄‍♂️For complete details, header over to the [official documentation](https://help.github.com/en/github/working-with-github-pages)
+You are all set 🏄‍♂ ️ For complete details, header over to the [official documentation](https://help.github.com/en/github/working-with-github-pages)
 
 ## License
 
-This project is Copyright (c) 2014-2020 Nimble. It is free software,
+This project is Copyright (c) Nimble. It is free software,
 and may be redistributed under the terms specified in the [LICENSE] file.
 
 [LICENSE]: /LICENSE

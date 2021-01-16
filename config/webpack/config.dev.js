@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const config = require('./shared');
+const config = require('./config.common');
 
 /**
  * `BUILD_ENV` holds the environment name to be used for loading environment specific configs

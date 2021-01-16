@@ -1,5 +1,5 @@
 ---
-url: https://jekyll.template
+url: https://nimblehq.co
 name: Jekyll Template
 permalink: pretty
 relative_permalinks: false
@@ -54,6 +54,8 @@ exclude:
   - LICENSE
   - package.json
   - package-lock.json
+  - postcss.config.js
   - Procfile.dev
   - README.md
   - Rakefile
+  - tailwind.config.js
