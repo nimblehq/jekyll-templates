@@ -10,12 +10,12 @@ This template offers rich development experience using the following technologie
 
 | **Tech*-                                          | **Description*-                                                   |
 |---------------------------------------------------|-------------------------------------------------------------------|
-| [Jekyll](https://jekyllrb.com/)                   | Transform plain text into static websites and blogs.              |  
-| [Webpack](https://webpack.js.org)                 | Bundles npm packages and application JS together.                 |
-| [ESLint](http://eslint.org/)                      | Lint JS. Reports syntax and style issues.                         |
-| [Kramdown](https://kramdown.gettalong.org/)       | Ruby-based markdown parser allowing to use both Markdown and HTML.| 
-| [SASS](http://sass-lang.com/)                     | Compiled CSS styles with variables, functions, and more.          | 
+| [Jekyll](https://jekyllrb.com/)                   | Transform plain text into static websites and blogs.              |
+| [Kramdown](https://kramdown.gettalong.org/)       | Ruby-based markdown parser allowing to use both Markdown and HTML.|
 | [TailwindCSS](https://tailwindcss.com/)           | A utility-first CSS framework for rapidly building custom designs.| 
+| [Stimulus JS](https://stimulus.hotwire.dev/)      | A A modest JavaScript framework for the HTML you already have.    |
+| [ESLint](http://eslint.org/)                      | Lint JS. Reports syntax and style issues.                         |
+| [Webpack](https://webpack.js.org)                 | Bundles npm packages and application JS together.                 |
 | [Docker](https://www.docker.com/)                 | Open platform to build, ship, and run applications everywhere.    | 
 
 ## Get Started
