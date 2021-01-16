@@ -20,55 +20,37 @@ This template offers rich development experience using the following technologie
 
 ## Get Started
 
-### Using Docker
+### Using Docker and Docker Compose 🐳
 
 This is the fastest way to get started working on Jekyll:
 
 - Rename the env file `.env.sample` to `.env` and add the required environment variables
 
-- Build the image locally and create a container for the application: 
+- Build the image locally and start the application:
 
-```shell
-./bin/setup
-```
-
-- Start the container:
-
-```shell
-./bin/start
+```bash
+$ ./bin/docker-start
 ```
 
 The container is running in development mode by default making the application reachable at `http://localhost:4000`.
 
-> `./bin/log` can be used to see the output of the Jekyll server. This is useful to check if the content is regenerated 
-properly inside the Docker container.
+### Without Docker
 
-### Without Docker a.k.a the legacy way 😢
-
-- Make sure that you have Ruby `2.7.1` and Node.JS > `12.x.x`
+- Make sure that you have Ruby `2.7.2` and Node.JS > `12.x.x`
 
 - Install dependencies
 
-```shell
-bundle install
-npm install
+```bash
+$ ./bin/setup
 ```
 
-- Use Jekyll to serve the website locally (by default, at `http://localhost:5000`):
+- Use Jekyll to serve the website locally (by default, at `http://localhost:4000`):
 
-```shell
-$ bundle exec jekyll serve --config ./config/jekyll.yml [--incremental]
-$ open http://localhost:5000/
+- Use Jekyll to serve the website locally (by default, at `http://localhost:4000`):
+
+```bash
+$ ./bin/start
 ```
-
-- Compile assets using Webpack: 
-
-```shell
-npm run start
-```
-
-> During development, both jekyll and webpack processes need to be started. To make this easier, foreman has been 
-configured in the project: `foreman start -f Procfile.dev`
 
 ## Managing Content
 
@@ -132,25 +114,30 @@ Corresponding to the following file structure:
 - In the case of using media other than images, prefer creating a new sub-directory e.g. `assets/videos/pages/<section-name>` 
 - To embed these media in the content, use the absolute path to each file: `/assets/<media type>/pages/<section-name>/<filename.extension>`
 
-## Testing
+## Tests
 
 As a static site grows to tens of hundreds of pages, broken links or HTML could easily make its way to a number of pages. 
 To prevent this issue, we use [HTMLProofer](https://github.com/gjtorikian/html-proofer).
 
-### Using Docker
+### Using Docker and Docker Compose 🐳
 
-Include this in your CI / CD pipeline:
+Make sure to define the following environment variables:
 
-```shell
-docker run --rm --entrypoint '/bin/bash' -it $DOCKER_IMAGE:$BRANCH_TAG -c 'bundle exec rake test:lint'
+- `DOCKER_IMAGE` e.g. it must match the name defined in your registry of choice such as Docker Hub or Github Container Registry
+- `BRANCH_TAG` e.g. for the current branch name `development`, `export BRANCH_TAG=development`
+
+Then execute all tests:
+
+```bash
+$ docker-compose -f docker-compose.test.yml up -d
 ```
 
 ### Without Docker
 
 Run this locally or your CI / CD pipeline:
 
-```shell
-bundle exec rake test:lint
+```bash
+$ ./bin/test
 ```
 
 ## Deployment
@@ -165,7 +152,7 @@ You are all set 🏄‍♂ ️ For complete details, header over to the [officia
 
 ## License
 
-This project is Copyright (c) Nimble. It is free software,
+This project is Copyright (c) 2014 and onwards Nimble. It is free software,
 and may be redistributed under the terms specified in the [LICENSE] file.
 
 [LICENSE]: /LICENSE
