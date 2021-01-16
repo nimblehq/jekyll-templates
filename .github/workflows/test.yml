@@ -47,5 +47,9 @@ jobs:
       - name: Compile Jekyll site
         run: ./bin/build
 
+      - name: Debug
+        run: |
+          ls _site/assets/javascript/
+
       - name: HTML Linter
         run: ./bin/test
