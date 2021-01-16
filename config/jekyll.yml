@@ -54,6 +54,8 @@ exclude:
   - LICENSE
   - package.json
   - package-lock.json
+  - postcss.config.js
   - Procfile.dev
   - README.md
   - Rakefile
+  - tailwind.config.js
