@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Installing Ruby dependencies"
+bundle install --jobs 4 --retry 3
+bundle install
+
+echo "Installing JavaScript dependencies"
+npm install
