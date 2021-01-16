@@ -1,7 +1,0 @@
-#!/bin/bash
-
-docker rm jekyll-template || true
-
-docker build ./ -t jekyll-template
-
-docker create -v $(pwd):/jekyll-template --name jekyll-template -it -p 4000:4000 jekyll-template

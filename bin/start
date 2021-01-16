@@ -1,3 +1,5 @@
 #!/bin/bash
 
-docker start jekyll-template
+export PORT=4000
+
+foreman start -f Procfile.dev
