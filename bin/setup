@@ -1,7 +1,8 @@
 #!/bin/bash
 
-docker rm jekyll-template || true
+echo "Installing Ruby dependencies"
+bundle install --jobs 4 --retry 3
+bundle install
 
-docker build ./ -t jekyll-template
-
-docker create -v $(pwd):/jekyll-template --name jekyll-template -it -p 4000:4000 jekyll-template
+echo "Installing JavaScript dependencies"
+npm install

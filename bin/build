@@ -1,3 +1,11 @@
 #!/bin/bash
 
-npm run build && bundle exec jekyll build --config ./config/jekyll.yml
+# Compile JS
+npm run build
+
+# Build Jekyll site
+if [[ $@ != "" ]]; then
+  bundle exec jekyll build $@
+else
+  bundle exec jekyll build --config ./config/jekyll.yml
+fi
