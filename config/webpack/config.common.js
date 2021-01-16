@@ -23,7 +23,7 @@ const configCommon = {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        commons: {
+        vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
           chunks: 'all'
