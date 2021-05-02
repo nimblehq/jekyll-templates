@@ -36,7 +36,7 @@ The container is running in development mode by default making the application r
 
 ### Without Docker
 
-- Make sure that you have Ruby `2.7.2` and Node.JS > `12.x.x`
+- Make sure that you have Ruby `2.7.x` and Node.JS > `12.x.x`
 
 - Install dependencies
 
