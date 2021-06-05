@@ -1,9 +1,7 @@
 const webpack = require('webpack');
-const config = require('./config.common');
+const { merge } = require('webpack-merge');
+const CommonConfig = require('./config.common');
 
-/**
- * `BUILD_ENV` holds the environment name to be used for loading environment specific configs
- * */
 const GLOBALS = {
   'process.env': {
     'NODE_ENV': JSON.stringify('production'),
@@ -11,10 +9,15 @@ const GLOBALS = {
   }
 };
 
-config['mode'] = 'production';
+module.exports = merge(CommonConfig, {
+  mode: 'production',
 
-config['optimization'] = Object.assign({ minimize: true }, config['optimization']);
+  plugins: [
+    new webpack.DefinePlugin(GLOBALS)
+  ],
 
-config['plugins'].push(new webpack.DefinePlugin(GLOBALS));
+  optimization: {
+    minimize: true
+  }
+});
 
-module.exports = config;

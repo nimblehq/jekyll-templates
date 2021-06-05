@@ -40,9 +40,8 @@ _site/
 node_modules/
 
 # Webpack compiled files
-assets/javascript/*.js
-assets/javascript/*.js.map
-assets/javascript/*sprite*
+assets/javascript/*
+assets/stylesheets/*
 
-# S3 deployment
+# Configuration
 .env
