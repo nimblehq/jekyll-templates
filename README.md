@@ -13,7 +13,7 @@ This template offers rich development experience using the following technologie
 | [Jekyll](https://jekyllrb.com/)                   | Transform plain text into static websites and blogs.              |
 | [Kramdown](https://kramdown.gettalong.org/)       | Ruby-based markdown parser allowing to use both Markdown and HTML.|
 | [TailwindCSS](https://tailwindcss.com/)           | A utility-first CSS framework for rapidly building custom designs.| 
-| [Stimulus JS](https://stimulus.hotwire.dev/)      | A A modest JavaScript framework for the HTML you already have.    |
+| [Stimulus JS](https://stimulus.hotwire.dev/)      | A modest JavaScript framework for the HTML you already have.    |
 | [ESLint](http://eslint.org/)                      | Lint JS. Reports syntax and style issues.                         |
 | [Webpack](https://webpack.js.org)                 | Bundles npm packages and application JS together.                 |
 | [Docker](https://www.docker.com/)                 | Open platform to build, ship, and run applications everywhere.    | 

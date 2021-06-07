@@ -1,9 +1,11 @@
 .layout-default body {
+  @apply bg-gray-200;
+
   display: grid;
   grid-template-rows: 8.5rem 1fr 5rem;
 
   min-height: 100vh;
-  padding: 0 5vw;
+  padding: 0 15vw;
 }
 
 .layout-default .app-header {

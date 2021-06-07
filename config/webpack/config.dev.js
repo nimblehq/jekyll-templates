@@ -1,9 +1,7 @@
 const webpack = require('webpack');
-const config = require('./config.common');
+const { merge } = require('webpack-merge');
+const CommonConfig = require('./config.common');
 
-/**
- * `BUILD_ENV` holds the environment name to be used for loading environment specific configs
- * */
 const GLOBALS = {
   'process.env': {
     'NODE_ENV': JSON.stringify('development'),
@@ -11,13 +9,12 @@ const GLOBALS = {
   }
 };
 
-config['mode'] = 'development';
+module.exports = merge(CommonConfig, {
+  mode: 'development',
 
-config['plugins'].push(new webpack.DefinePlugin(GLOBALS));
+  devtool: 'inline-source-map',
 
-config['plugins'].push(new webpack.SourceMapDevToolPlugin({
-  filename: '[name].js.map',
-  exclude: ['spritemap']
-}));
-
-module.exports = config;
+  plugins: [
+    new webpack.DefinePlugin(GLOBALS)
+  ]
+});
