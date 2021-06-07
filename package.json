@@ -20,7 +20,7 @@
   "homepage": "https://github.com/nimblehq/jekyll-templates#readme",
   "engines": {
     "node": ">=14.0.0",
-    "npm": ">=7.0.0"
+    "npm": ">=6.0.0"
   },
   "devDependencies": {
     "@nimblehq/eslint-config-nimble": "2.1.1",
